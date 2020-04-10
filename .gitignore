@@ -12,3 +12,4 @@ web-report/
 yarn.lock
 package-lock.json
 ReactotronConfig.js
+app.json

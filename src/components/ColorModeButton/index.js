@@ -1,18 +1,11 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors } from "@styles";
 import PropTypes from "prop-types";
 import React from "react";
-import { Button } from "./styles";
+import { Button, ColorModeIcon } from "./styles";
 
-export default function ColorModeButton({
-  onPress,
-  iconName,
-  iconColor,
-  background,
-}) {
+export default function ColorModeButton({ onPress, iconName }) {
   return (
-    <Button background={background} onPress={onPress}>
-      <MaterialCommunityIcons name={iconName} color={iconColor} size={40} />
+    <Button onPress={onPress}>
+      <ColorModeIcon name={iconName} size={40} />
     </Button>
   );
 }
@@ -20,11 +13,8 @@ export default function ColorModeButton({
 ColorModeButton.propTypes = {
   onPress: PropTypes.func,
   iconName: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
-  iconColor: PropTypes.string,
 };
 
 ColorModeButton.defaultProps = {
   onPress: () => {},
-  iconColor: colors.white,
 };

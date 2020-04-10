@@ -4,11 +4,10 @@ import {
   FloatingButton,
   ItemView,
 } from "@components";
-import { colors } from "@styles";
 import { Container } from "@styles/components";
 import PropTypes from "prop-types";
 import React from "react";
-import { Alert, FlatList, StatusBar } from "react-native";
+import { Alert, FlatList } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home({ navigation }) {
@@ -22,11 +21,11 @@ export default function Home({ navigation }) {
   };
 
   const changeConfMode = () => {
-    dispatch({ type: "CHANGE_MODE", darkMode: !conf.darkMode });
+    dispatch({ type: "CHANGE_MODE", darkModeOn: !conf.darkModeOn });
   };
 
   const colorModeProps = {
-    iconName: conf.darkMode ? "weather-sunny" : "weather-night",
+    iconName: conf.darkModeOn ? "weather-sunny" : "weather-night",
   };
 
   const showAlert = (index) => {
@@ -71,8 +70,7 @@ export default function Home({ navigation }) {
 
   return (
     <>
-      <StatusBar barStyle={conf.darkMode ? "light-content" : "dark-content"} />
-      <Container backgroundColor={conf.modeColor.default}>
+      <Container>
         <FlatList
           style={{ flex: 1 }}
           contentContainerStyle={{ flexGrow: 1 }}
@@ -88,12 +86,7 @@ export default function Home({ navigation }) {
           }}
           iconName="add"
         />
-        <ColorModeButton
-          {...colorModeProps}
-          onPress={() => changeConfMode()}
-          background={colors.secondary}
-          iconColor={colors.defaultText}
-        />
+        <ColorModeButton {...colorModeProps} onPress={() => changeConfMode()} />
       </Container>
     </>
   );
