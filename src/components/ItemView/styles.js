@@ -3,7 +3,7 @@ import { colors } from "@styles";
 import styled from "styled-components/native";
 
 export const CardText = styled.Text`
-  color: ${({ color }) => color};
+  color: ${({ theme }) => theme.defaultText};
 `;
 
 export const Item = styled.TouchableOpacity`
@@ -12,7 +12,7 @@ export const Item = styled.TouchableOpacity`
   margin: 10px 20px;
   border-radius: 10px;
   justify-content: space-between;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ theme }) => theme.secondary};
 `;
 
 export const ItemName = styled.View`

@@ -1,12 +1,8 @@
-import { darkModeColors, lightModeColors } from "@styles/colors";
-
-export default function conf(state = { darkMode: true }, action) {
+export default function conf(state = { darkModeOn: true }, action) {
   switch (action.type) {
     case "CHANGE_MODE":
-      const colorObj = action.darkMode ? darkModeColors : lightModeColors;
-      return { ...state, darkMode: action.darkMode, modeColor: colorObj };
+      return { ...state, darkModeOn: action.darkModeOn };
     default:
-      const color = state.darkMode ? darkModeColors : lightModeColors;
-      return { ...state, modeColor: color };
+      return state;
   }
 }

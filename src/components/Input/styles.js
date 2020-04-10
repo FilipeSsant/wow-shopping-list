@@ -3,6 +3,7 @@ import { Animated } from "react-native";
 import styled, { css } from "styled-components/native";
 
 export const InputTextBoxStyled = styled.View`
+  background-color: ${({ theme }) => theme.secondary};
   height: 50px;
   width: ${({ width }) => width || `328px`};
   border-radius: 6px;
@@ -16,6 +17,7 @@ export const InputTextBoxStyled = styled.View`
 
 export const LabelStyled = styled(Animated.Text)`
   position: absolute;
+  color: ${({ theme }) => theme.defaultText};
 `;
 
 export const ErrorLabelStyled = styled.Text`
@@ -32,4 +34,5 @@ export const InputTextStyled = styled.TextInput`
   border: none;
   font-size: 18px;
   position: relative;
+  color: ${({ theme }) => theme.defaultText};
 `;

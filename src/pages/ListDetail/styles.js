@@ -28,4 +28,5 @@ export const Footer = styled.View`
 export const FooterText = styled.Text`
   font-size: 18px;
   padding: 20px 0;
+  color: ${({ theme }) => theme.defaultText};
 `;

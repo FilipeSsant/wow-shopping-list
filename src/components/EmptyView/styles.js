@@ -13,18 +13,18 @@ export const MaterialCommunityIcon = styled(MaterialCommunityIcons).attrs({
 })`
   opacity: 0.2;
   padding: 10px;
-  color: ${({ color }) => color};
+  color: ${({ theme }) => theme.defaultText};
 `;
 
 export const EmptyText = styled.Text`
   font-size: 16px;
   opacity: 0.8;
-  color: ${({ color }) => color};
+  color: ${({ theme }) => theme.defaultText};
 `;
 
 export const SadIcon = styled(MaterialCommunityIcons).attrs({
   name: "emoticon-sad",
   size: 20,
 })`
-  color: ${({ color }) => color};
+  color: ${({ theme }) => theme.defaultText};
 `;

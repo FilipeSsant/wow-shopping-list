@@ -2,7 +2,7 @@ import { FloatingButton, Input } from "@components";
 import { Container } from "@styles/components";
 import validate from "@utils/validator";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Box } from "./styles";
 
 export default function AddList({ navigation }) {
@@ -11,7 +11,6 @@ export default function AddList({ navigation }) {
 
   // redux
   const dispatch = useDispatch();
-  const conf = useSelector((state) => state.conf);
 
   const inputValue = async (value) => {
     await setName(value.name);
@@ -31,10 +30,7 @@ export default function AddList({ navigation }) {
   };
 
   return (
-    <Container
-      style={{ alignItems: "center" }}
-      backgroundColor={conf.modeColor.default}
-    >
+    <Container style={{ alignItems: "center" }}>
       <Box>
         <Input
           name="name"

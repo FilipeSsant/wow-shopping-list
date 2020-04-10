@@ -15,7 +15,6 @@ export default function ListDetail({ route, navigation }) {
   const { listIndex } = route.params;
   const items = useSelector((state) => state.lists[listIndex].items);
   const list = useSelector((state) => state.lists[listIndex]);
-  const conf = useSelector((state) => state.conf);
   const dispatch = useDispatch();
 
   // state variables
@@ -150,7 +149,7 @@ export default function ListDetail({ route, navigation }) {
 
     return (
       <Footer>
-        <FooterText style={{ color: conf.modeColor.defaultText }}>
+        <FooterText>
           {total === 0 ? "" : `${total} ${total > 1 ? "itens" : "item"}`}
         </FooterText>
       </Footer>
@@ -158,7 +157,7 @@ export default function ListDetail({ route, navigation }) {
   };
 
   return (
-    <Container backgroundColor={conf.modeColor.default}>
+    <Container>
       <Box>
         <Input
           width="55%"
