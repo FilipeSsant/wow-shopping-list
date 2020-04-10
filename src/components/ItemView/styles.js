@@ -1,10 +1,9 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from "@styles";
+import { GlobalText } from "@styles/components";
 import styled from "styled-components/native";
 
-export const CardText = styled.Text`
-  color: ${({ theme }) => theme.defaultText};
-`;
+export const CardText = styled(GlobalText)``;
 
 export const Item = styled.TouchableOpacity`
   flex-direction: row;

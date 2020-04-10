@@ -1,3 +1,4 @@
+import { GlobalText } from "@styles/components";
 import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 
@@ -25,8 +26,7 @@ export const Footer = styled.View`
   align-items: center;
 `;
 
-export const FooterText = styled.Text`
+export const FooterText = styled(GlobalText)`
   font-size: 18px;
   padding: 20px 0;
-  color: ${({ theme }) => theme.defaultText};
 `;

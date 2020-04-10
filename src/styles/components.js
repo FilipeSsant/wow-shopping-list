@@ -5,3 +5,7 @@ export const Container = styled.View`
   justify-content: flex-start;
   background-color: ${({ theme }) => theme.background};
 `;
+
+export const GlobalText = styled.Text`
+  color: ${({ theme }) => theme.defaultText};
+`;
