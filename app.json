@@ -1,0 +1,17 @@
+{
+  "name": "wow_shopping_list",
+  "displayName": "wow_shopping_list",
+  "expo": {
+    "name": "wow_shopping_list",
+    "slug": "expo-template-bare",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
