@@ -1,6 +1,6 @@
 # wow-shopping-list
 
-react native app, expo, react navigation 5x, redux, react hooks and styled-components.
+react native app, react navigation 5x, redux, react hooks and styled-components.
 
 <b>NOVIDADES!</b>
 
@@ -11,6 +11,6 @@ react native app, expo, react navigation 5x, redux, react hooks and styled-compo
 - lista de compras aonde você pode adicionar listas e dentro delas itens, tendo a opção de exlusão.
 - feature: modo dark / light
 
-<b>expo link</b>
+<b>downloads</b>
 
-- <b>android</b>: https://expo.io/@filipessant/wow-shopping-list
+- <b>apk caminho</b>: apk/app-release.apk
